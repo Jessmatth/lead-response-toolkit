@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+**/.DS_Store
+
+# Google OAuth secrets — never commit
+oauth-client.json
+token.json
+service-account.json
+secrets/
