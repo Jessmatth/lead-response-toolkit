@@ -4,7 +4,7 @@
 
 > Leads that get a response within 5 minutes are **10x more likely to close** than those contacted an hour later. This toolkit closes that response gap for you, automatically.
 
-You just downloaded the whole thing. Set it up once (about 20 minutes, all on free tiers), point your signup form or ad at it, and every new lead gets an instant, personalized reply while you get a qualified, scored record in your inbox and a spreadsheet.
+You just downloaded the whole thing. Set it up once (about 20 minutes), point your signup form or ad at it, and every new lead gets an instant, personalized reply while you get a qualified, scored record in your inbox and a spreadsheet. Running costs are low: Google and hosting can start free, and the AI is usage-based (typically a few cents per lead, less if you use a smaller model).
 
 ---
 
@@ -34,11 +34,9 @@ Founders, marketers, and small sales teams who get inbound leads from a form, an
 
 ## What you'll need
 
-All have free tiers:
-
-- An **[Anthropic API key](https://console.anthropic.com)** (powers the AI qualification and reply).
-- A **Google account** (Gmail sends the emails, Google Sheets stores the leads).
-- **[Node.js 20+](https://nodejs.org)** to run it locally, and a **[Replit](https://replit.com)** account (or any host) to put it online.
+- An **[Anthropic API key](https://console.anthropic.com)** — powers the AI qualification. This is **paid, usage-based**: you're billed per lead the AI reads (a small amount of text each time), so cost scales with volume. Expect roughly a few cents per lead on the default model, and much less if you point `CLAUDE_MODEL` at a cheaper one like `claude-haiku-4-5`. New accounts may include some trial credit.
+- A **Google account** — free. Gmail sends the emails, Google Sheets stores the leads.
+- **[Node.js 20+](https://nodejs.org)** — free, to run it locally. Plus a host to put it online: **[Replit](https://replit.com)** is the easy path (free to build; deployments have a small usage cost), but any Node host works.
 
 ---
 
@@ -71,7 +69,7 @@ A one-time browser sign-in. No Workspace or admin account needed — a normal Gm
 
 ### 3. Add your Anthropic key
 
-Set `ANTHROPIC_API_KEY` in `.env`. The model defaults to `claude-opus-4-8` (override with `CLAUDE_MODEL` if you like).
+Set `ANTHROPIC_API_KEY` in `.env`. The model defaults to `claude-opus-4-8`, which gives the sharpest qualification. If you expect high volume and want to keep costs down, set `CLAUDE_MODEL=claude-haiku-4-5` — it's a fraction of the cost and still handles lead scoring well.
 
 ### 4. Make it yours
 
