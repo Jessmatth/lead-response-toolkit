@@ -2,7 +2,9 @@ import "dotenv/config";
 
 /** Read an env var, throwing a clear error if it's required and missing. */
 function env(name: string, required = true, fallback = ""): string {
-  const value = process.env[name] ?? fallback;
+  // Trim so a stray space in .env (e.g. "NAME= value") doesn't leak into
+  // prompts, emails, or IDs. JSON blobs are read elsewhere, so this is safe.
+  const value = (process.env[name] ?? fallback).trim();
   if (required && !value) {
     throw new Error(`Missing required environment variable: ${name}`);
   }
