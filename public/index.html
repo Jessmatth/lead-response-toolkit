@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stop letting leads go cold — free automation toolkit</title>
+    <title>Never lose another inbound lead — free AI toolkit</title>
     <meta
       name="description"
-      content="The automation that qualifies and responds to inbound leads automatically. Grab the files free."
+      content="Download the exact AI workflow that qualifies every lead, responds in seconds, and books more meetings. No coding or Zapier/n8n required."
     />
     <style>
       :root {
@@ -40,8 +40,26 @@
         font-weight: 700;
         margin-bottom: 14px;
       }
-      h1 { font-size: 32px; line-height: 1.15; margin: 0 0 14px; }
+      h1 { font-size: 34px; line-height: 1.12; margin: 0 0 16px; }
       .sub { color: var(--muted); font-size: 17px; line-height: 1.5; margin: 0 0 28px; }
+      .leadin { color: var(--text); font-size: 17px; line-height: 1.5; margin: 0 0 14px; font-weight: 600; }
+      .benefits { list-style: none; padding: 0; margin: 0 0 20px; }
+      .benefits li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 11px;
+        font-size: 17px;
+        color: var(--text);
+      }
+      .benefits li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--accent);
+        font-weight: 700;
+      }
+      .reassure { color: var(--muted); font-size: 15px; line-height: 1.55; margin: 0 0 28px; }
       .card {
         background: var(--card);
         border: 1px solid rgba(255, 255, 255, 0.07);
@@ -91,10 +109,16 @@
   <body>
     <div class="wrap">
       <div class="eyebrow">Free toolkit</div>
-      <h1>Stop letting your leads go cold.</h1>
-      <p class="sub">
-        The automation that qualifies and responds to every inbound lead in seconds —
-        the same system, ready to drop into your stack. Tell me where to send it.
+      <h1>Never lose another inbound lead.</h1>
+      <p class="leadin">Download the exact AI workflow that:</p>
+      <ul class="benefits">
+        <li>Qualifies every new lead</li>
+        <li>Responds in seconds</li>
+        <li>Books more meetings automatically</li>
+      </ul>
+      <p class="reassure">
+        No coding or automation tools (Zapier, n8n) required. Ready to plug into
+        your existing tools.
       </p>
 
       <div class="card">
@@ -120,7 +144,7 @@
             <label for="website">Website</label>
             <input id="website" name="website" tabindex="-1" autocomplete="off" />
           </div>
-          <button id="submitBtn" type="submit">Send me the toolkit →</button>
+          <button id="submitBtn" type="submit">Get the free toolkit →</button>
           <div id="msg" class="msg"></div>
         </form>
 
@@ -176,7 +200,7 @@
             msg.className = "msg err";
             msg.textContent = data.error || "Something went wrong. Please try again.";
             btn.disabled = false;
-            btn.textContent = "Send me the toolkit →";
+            btn.textContent = "Get the free toolkit →";
           }
         } catch {
           msg.className = "msg err";
