@@ -44,9 +44,8 @@ function teamEmailBody(lead: Lead, q: Qualification): string {
     "",
     `Routing:   ${q.routing}`,
     `Reasoning: ${q.reasoning}`,
-    "",
-    "Their biggest lead-gen challenge:",
-    lead.message || "(none provided)",
+    // Only shown if the form collected a free-text message.
+    ...(lead.message ? ["", "Their message:", lead.message] : []),
   ];
   return lines.filter((line): line is string => line !== null).join("\n");
 }

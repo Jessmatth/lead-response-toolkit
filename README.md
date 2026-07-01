@@ -1,6 +1,6 @@
 # Lead Response Toolkit
 
-**Stop letting your leads go cold.** This is the automation that qualifies and responds to every inbound lead in seconds, so no one sits waiting while a competitor gets there first.
+**Never lose another inbound lead.** The exact AI workflow that qualifies every new lead, responds in seconds, and books more meetings automatically. No coding or automation tools (Zapier, n8n) required — it plugs into the tools you already use.
 
 > Leads that get a response within 5 minutes are **10x more likely to close** than those contacted an hour later. This toolkit closes that response gap for you, automatically.
 
@@ -26,7 +26,7 @@ Visitor ──▶ your form ──POST /lead──▶  Express
                                           └─▶ Gmail   (alert you, tagged by tier)
 ```
 
-It ships with a clean, hosted signup page ([public/index.html](public/index.html)), so you don't even need a separate form tool. The whole thing runs as one small app.
+It ships with a clean, hosted signup page ([public/index.html](public/index.html)) that collects just name, email, and company, so you don't even need a separate form tool. The whole thing runs as one small app.
 
 ## Who this is for
 

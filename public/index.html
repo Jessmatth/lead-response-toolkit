@@ -135,10 +135,6 @@
             <label for="company">Company</label>
             <input id="company" name="company" autocomplete="organization" />
           </div>
-          <div class="field">
-            <label for="challenge">What's your biggest lead-generation challenge?</label>
-            <textarea id="challenge" name="challenge" placeholder="e.g. leads sit for hours before anyone replies"></textarea>
-          </div>
           <!-- Honeypot -->
           <div class="hp" aria-hidden="true">
             <label for="website">Website</label>
@@ -180,7 +176,6 @@
           name: form.name.value,
           email: form.email.value,
           company: form.company.value,
-          challenge: form.challenge.value,
           website: form.website.value, // honeypot
           utm_source: params.get("utm_source") || "",
           utm_campaign: params.get("utm_campaign") || "",

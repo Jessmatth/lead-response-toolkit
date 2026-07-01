@@ -40,7 +40,7 @@ export async function qualifyLead(lead: Lead): Promise<Qualification> {
   const system = [
     `You qualify inbound leads for ${config.company.name}.`,
     config.company.description && `About the business: ${config.company.description}`,
-    "These leads opted in to download a free lead-response automation toolkit. Score on fit (do they look like a real potential customer/buyer) and intent (how serious, based on their stated challenge). Mark obvious junk/bots as tier 'spam' with a low score.",
+    "These leads opted in to download a free lead-response automation toolkit. Score on fit — do they look like a real potential customer/buyer, judging from their name, company, and email domain (a business domain is a stronger signal than a free personal inbox). Mark obvious junk/bots as tier 'spam' with a low score.",
   ]
     .filter(Boolean)
     .join("\n\n");

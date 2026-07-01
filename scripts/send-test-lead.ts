@@ -18,7 +18,6 @@ const submission = {
   name: "Dana Reyes",
   email,
   company: "Acme Robotics",
-  challenge: "Leads sit for hours before anyone replies and we lose them to faster competitors.",
   website: "", // honeypot left empty
   utm_source: "x",
   utm_campaign: "launch",
